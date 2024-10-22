@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoMarket.Domain\CryptoMarket.Domain.csproj" />
+    <ProjectReference Include="..\CryptoMarket.Infrastructure\CryptoMarket.Infrastructure.csproj" />
+    <ProjectReference Include="..\CryptoMarket.ViewModels\CryptoMarket.ViewModels.csproj" />
+    <ProjectReference Include="..\CryptoMarket.Views\CryptoMarket.Views.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket", "CryptoMarket\CryptoMarket.csproj", "{96DF4B5D-0296-4F39-ABA4-533AC6193FAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryproMarket.Bootstrapper", "CryproMarket.Bootstrapper\CryproMarket.Bootstrapper.csproj", "{8CC3EAB4-0427-4966-99D4-F7F916383319}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.Views", "CryptoMarket.Views\CryptoMarket.Views.csproj", "{0781A6A1-B63D-4506-9533-DF2DC12CEAF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.ViewModels", "CryptoMarket.ViewModels\CryptoMarket.ViewModels.csproj", "{4B728400-1572-49AE-948E-23B93E73C141}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.Domain", "CryptoMarket.Domain\CryptoMarket.Domain.csproj", "{F469CFAF-6494-4A1D-9550-EB5F5E9EE0E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.Infrastructure", "CryptoMarket.Infrastructure\CryptoMarket.Infrastructure.csproj", "{6660C07E-EDFA-46AE-BD73-E4B6FD1ACD61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96DF4B5D-0296-4F39-ABA4-533AC6193FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96DF4B5D-0296-4F39-ABA4-533AC6193FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96DF4B5D-0296-4F39-ABA4-533AC6193FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96DF4B5D-0296-4F39-ABA4-533AC6193FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC3EAB4-0427-4966-99D4-F7F916383319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC3EAB4-0427-4966-99D4-F7F916383319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC3EAB4-0427-4966-99D4-F7F916383319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC3EAB4-0427-4966-99D4-F7F916383319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0781A6A1-B63D-4506-9533-DF2DC12CEAF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0781A6A1-B63D-4506-9533-DF2DC12CEAF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0781A6A1-B63D-4506-9533-DF2DC12CEAF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0781A6A1-B63D-4506-9533-DF2DC12CEAF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B728400-1572-49AE-948E-23B93E73C141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B728400-1572-49AE-948E-23B93E73C141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B728400-1572-49AE-948E-23B93E73C141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B728400-1572-49AE-948E-23B93E73C141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F469CFAF-6494-4A1D-9550-EB5F5E9EE0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F469CFAF-6494-4A1D-9550-EB5F5E9EE0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F469CFAF-6494-4A1D-9550-EB5F5E9EE0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F469CFAF-6494-4A1D-9550-EB5F5E9EE0E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6660C07E-EDFA-46AE-BD73-E4B6FD1ACD61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6660C07E-EDFA-46AE-BD73-E4B6FD1ACD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6660C07E-EDFA-46AE-BD73-E4B6FD1ACD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6660C07E-EDFA-46AE-BD73-E4B6FD1ACD61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB2B47A4-86F5-4808-8BF3-99C6569566BC}
+	EndGlobalSection
+EndGlobal
