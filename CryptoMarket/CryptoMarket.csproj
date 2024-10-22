@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CryproMarket.Bootstrapper\CryproMarket.Bootstrapper.csproj" />
+    <ProjectReference Include="..\CryptoMarket.Bootstrapper\CryptoMarket.Bootstrapper.csproj" />
   </ItemGroup>
 
 </Project>

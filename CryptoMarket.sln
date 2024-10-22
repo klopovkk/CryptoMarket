@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket", "CryptoMarket\CryptoMarket.csproj", "{96DF4B5D-0296-4F39-ABA4-533AC6193FAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoMarket", "CryptoMarket\CryptoMarket.csproj", "{96DF4B5D-0296-4F39-ABA4-533AC6193FAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryproMarket.Bootstrapper", "CryproMarket.Bootstrapper\CryproMarket.Bootstrapper.csproj", "{8CC3EAB4-0427-4966-99D4-F7F916383319}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoMarket.Domain", "CryptoMarket.Domain\CryptoMarket.Domain.csproj", "{F469CFAF-6494-4A1D-9550-EB5F5E9EE0E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.Views", "CryptoMarket.Views\CryptoMarket.Views.csproj", "{0781A6A1-B63D-4506-9533-DF2DC12CEAF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoMarket.Infrastructure", "CryptoMarket.Infrastructure\CryptoMarket.Infrastructure.csproj", "{6660C07E-EDFA-46AE-BD73-E4B6FD1ACD61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.ViewModels", "CryptoMarket.ViewModels\CryptoMarket.ViewModels.csproj", "{4B728400-1572-49AE-948E-23B93E73C141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoMarket.Views", "CryptoMarket.Views\CryptoMarket.Views.csproj", "{B1E4ACBA-D362-40C5-9CC1-8F6902431B45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.Domain", "CryptoMarket.Domain\CryptoMarket.Domain.csproj", "{F469CFAF-6494-4A1D-9550-EB5F5E9EE0E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoMarket.ViewModels", "CryptoMarket.ViewModels\CryptoMarket.ViewModels.csproj", "{74BCFF5C-10B6-4ECE-8CBC-6DCEBDC6362C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.Infrastructure", "CryptoMarket.Infrastructure\CryptoMarket.Infrastructure.csproj", "{6660C07E-EDFA-46AE-BD73-E4B6FD1ACD61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoMarket.Bootstrapper", "CryptoMarket.Bootstrapper\CryptoMarket.Bootstrapper.csproj", "{E6308598-AEE6-439A-A17C-3FAEFEE829DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,18 +25,6 @@ Global
 		{96DF4B5D-0296-4F39-ABA4-533AC6193FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96DF4B5D-0296-4F39-ABA4-533AC6193FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96DF4B5D-0296-4F39-ABA4-533AC6193FAC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8CC3EAB4-0427-4966-99D4-F7F916383319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CC3EAB4-0427-4966-99D4-F7F916383319}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CC3EAB4-0427-4966-99D4-F7F916383319}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CC3EAB4-0427-4966-99D4-F7F916383319}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0781A6A1-B63D-4506-9533-DF2DC12CEAF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0781A6A1-B63D-4506-9533-DF2DC12CEAF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0781A6A1-B63D-4506-9533-DF2DC12CEAF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0781A6A1-B63D-4506-9533-DF2DC12CEAF4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4B728400-1572-49AE-948E-23B93E73C141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B728400-1572-49AE-948E-23B93E73C141}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B728400-1572-49AE-948E-23B93E73C141}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4B728400-1572-49AE-948E-23B93E73C141}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F469CFAF-6494-4A1D-9550-EB5F5E9EE0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F469CFAF-6494-4A1D-9550-EB5F5E9EE0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F469CFAF-6494-4A1D-9550-EB5F5E9EE0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +33,18 @@ Global
 		{6660C07E-EDFA-46AE-BD73-E4B6FD1ACD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6660C07E-EDFA-46AE-BD73-E4B6FD1ACD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6660C07E-EDFA-46AE-BD73-E4B6FD1ACD61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1E4ACBA-D362-40C5-9CC1-8F6902431B45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1E4ACBA-D362-40C5-9CC1-8F6902431B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1E4ACBA-D362-40C5-9CC1-8F6902431B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1E4ACBA-D362-40C5-9CC1-8F6902431B45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74BCFF5C-10B6-4ECE-8CBC-6DCEBDC6362C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74BCFF5C-10B6-4ECE-8CBC-6DCEBDC6362C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74BCFF5C-10B6-4ECE-8CBC-6DCEBDC6362C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74BCFF5C-10B6-4ECE-8CBC-6DCEBDC6362C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6308598-AEE6-439A-A17C-3FAEFEE829DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6308598-AEE6-439A-A17C-3FAEFEE829DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6308598-AEE6-439A-A17C-3FAEFEE829DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6308598-AEE6-439A-A17C-3FAEFEE829DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
