@@ -1,17 +1,39 @@
-﻿using CryptoMarket.Views;
-using System.Windows;
-using System.Windows.Automation.Peers;
+﻿using System.Windows;
+using Autofac;
+using CryptoMarket.ViewModels;
+using CryptoMarket.Views.MainWindow;
 
-namespace CryptoMarket.Bootstrapper
+namespace CryptoMarket.Bootstrapper;
+
+public class Bootstrapper : IDisposable
 {
-    public class Bootstrapper : IDisposable
+    private readonly IContainer _container;
+
+    public Bootstrapper()
     {
-        public Window  Run ()
-        {
-            var mainWindow = new MainWindow();
-            mainWindow.Show();
-            return mainWindow;
-        }
-        public void Dispose() { }
+        var containerBuilder = new ContainerBuilder();
+
+        containerBuilder
+            .RegisterModule<Views.RegistrationModule>()
+            .RegisterModule<RegistrationModule>();
+
+        _container = containerBuilder.Build();
+    }
+
+    public void Dispose()
+    {
+        _container.Dispose();
+    }
+
+    public Window Run()
+    {
+        var mainWindow = _container.Resolve<IMainWindow>();
+
+        if (mainWindow is not Window window) 
+            throw new NotImplementedException();
+
+        window.Show();
+
+        return window;
     }
 }
