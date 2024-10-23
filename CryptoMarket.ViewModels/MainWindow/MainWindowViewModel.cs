@@ -1,14 +1,24 @@
-﻿using CryptoMarket.Domain.Settings;
+﻿using System.Windows.Input;
+using CryptoMarket.Domain.Settings;
+using CryptoMarket.ViewModels.Commands;
+using CryptoMarket.ViewModels.Windows;
 
 namespace CryptoMarket.ViewModels.MainWindow;
 
 public class MainWindowViewModel : IMainWindowViewModel
 {
+    private readonly Command _closeMainWindowCommand;
     private readonly IMainWindowMementoWrapper _mainWindowMementoWrapper;
+    private readonly IWindowManager _windowManager;
 
-    public MainWindowViewModel(IMainWindowMementoWrapper mainWindowMementoWrapper)
+    public MainWindowViewModel(
+        IMainWindowMementoWrapper mainWindowMementoWrapper,
+        IWindowManager windowManager)
     {
         _mainWindowMementoWrapper = mainWindowMementoWrapper;
+        _windowManager = windowManager;
+
+        _closeMainWindowCommand = new Command(CloseMainWindow);
     }
 
     public double Left
@@ -42,4 +52,11 @@ public class MainWindowViewModel : IMainWindowViewModel
     }
 
     public string Title => "Crypto Market";
+
+    public ICommand CloseMainWindowCommand => _closeMainWindowCommand;
+
+    private void CloseMainWindow()
+    {
+        _windowManager.Close(this);
+    }
 }

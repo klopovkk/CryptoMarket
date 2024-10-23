@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Autofac;
+﻿using Autofac;
+using CryptoMarket.ViewModels.Windows;
 using CryptoMarket.Views.MainWindow;
+using CryptoMarket.Views.Windows;
 
-namespace CryptoMarket.Views
+namespace CryptoMarket.Views;
+
+public class RegistrationModule : Module
 {
-    public class RegistrationModule : Module
+    protected override void Load(ContainerBuilder builder)
     {
-        protected override void Load(ContainerBuilder builder)
-        {
-            base.Load(builder);
+        base.Load(builder);
 
-            builder.RegisterType<MainWindow.MainWindow>().As<IMainWindow>().InstancePerDependency();
-        }
+        builder.RegisterType<MainWindow.MainWindow>().As<IMainWindow>().InstancePerDependency();
+        builder.RegisterType<WindowsManager>().As<IWindowManager>().SingleInstance();
     }
 }

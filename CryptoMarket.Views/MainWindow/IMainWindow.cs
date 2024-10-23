@@ -1,5 +1,7 @@
-﻿namespace CryptoMarket.Views.MainWindow;
+﻿using CryptoMarket.ViewModels.Windows;
 
-public interface IMainWindow
+namespace CryptoMarket.Views.MainWindow;
+
+public interface IMainWindow : IWindow
 {
 }
