@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using Autofac;
+using CryptoMarket.Infrastructure.Settings;
 using CryptoMarket.ViewModels;
 using CryptoMarket.Views.MainWindow;
 
@@ -14,6 +15,7 @@ public class Bootstrapper : IDisposable
         var containerBuilder = new ContainerBuilder();
 
         containerBuilder
+            .RegisterModule<Infrastructure.RegistrationModule>()
             .RegisterModule<Views.RegistrationModule>()
             .RegisterModule<RegistrationModule>();
 
@@ -27,6 +29,8 @@ public class Bootstrapper : IDisposable
 
     public Window Run()
     {
+        InitializeDependencies();
+
         var mainWindow = _container.Resolve<IMainWindow>();
 
         if (mainWindow is not Window window) 
@@ -35,5 +39,10 @@ public class Bootstrapper : IDisposable
         window.Show();
 
         return window;
+    }
+
+    private void InitializeDependencies()
+    {
+        _container.Resolve<IMainWindowMementoWrapperInitializer>().Initialize();
     }
 }
