@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace CryptoMarket.Infrastructure.Settings
 {
     [DataContract]
-    internal class MainWindowMemento
+    internal class MainWindowMemento : WindowMemento
     {
         public MainWindowMemento()
         {
@@ -16,21 +16,7 @@ namespace CryptoMarket.Infrastructure.Settings
             Top = 100;
             Width = 640;
             Height = 400;
-            IsMaximized = true;
+            IsMaximized = false;
         }
-        [DataMember(Name = "left")]
-        public double Left { get; set; }
-        [DataMember(Name = "width")]
-
-        public double Width { get; set; }
-        [DataMember(Name = "top")]
-
-        public double Top { get; set; }
-        [DataMember(Name = "height")]
-
-        public double Height { get; set; }
-        [DataMember(Name = "isMaximized")]
-
-        public bool IsMaximized { get; set; }
     }
 }

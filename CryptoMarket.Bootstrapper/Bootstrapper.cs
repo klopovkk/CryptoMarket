@@ -1,9 +1,9 @@
 ﻿using System.Windows;
 using Autofac;
+using CryptoMarket.Infrastructure.Common;
 using CryptoMarket.Infrastructure.Settings;
 using CryptoMarket.ViewModels.MainWindow;
 using CryptoMarket.ViewModels.Windows;
-using CryptoMarket.Views.MainWindow;
 
 namespace CryptoMarket.Bootstrapper;
 
@@ -24,11 +24,6 @@ public class Bootstrapper : IDisposable
         _container = containerBuilder.Build();
     }
 
-    public void Dispose()
-    {
-        _container.Dispose();
-    }
-
     public async Task<Window> Run()
     {
         await InitializeDependenciesAsync();
@@ -36,7 +31,7 @@ public class Bootstrapper : IDisposable
         var mainWindowViewModel = _container.Resolve<IMainWindowViewModel>();
         var windowManager = _container.Resolve<IWindowManager>();
 
-       var mainWindow = windowManager.Show(mainWindowViewModel);
+        var mainWindow = windowManager.Show(mainWindowViewModel);
 
         if (mainWindow is not Window window)
             throw new NotImplementedException();
@@ -46,6 +41,14 @@ public class Bootstrapper : IDisposable
 
     private async Task InitializeDependenciesAsync()
     {
-       await _container.Resolve<IMainWindowMementoWrapperInitializer>().InitializeAsync();
+        _container.Resolve<IPathServiceInitializer>().Initialize();
+
+        var windowMementoWrapperInitializer = _container.Resolve<IEnumerable<IWindowMementoWrapperInitializer>>();
+        foreach (var window in windowMementoWrapperInitializer) await window.InitializeAsync();
+    }
+
+    public void Dispose()
+    {
+        _container.Dispose();
     }
 }

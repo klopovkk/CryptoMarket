@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using CryptoMarket.Domain.Settings;
+using CryptoMarket.Infrastructure.Common;
 using CryptoMarket.Infrastructure.Settings;
 
 namespace CryptoMarket.Infrastructure
@@ -12,7 +13,12 @@ namespace CryptoMarket.Infrastructure
 
             builder.RegisterType<MainWindowMementoWrapper>()
                 .As<IMainWindowMementoWrapper>()
-                .As<IMainWindowMementoWrapperInitializer>()
+                .As<IWindowMementoWrapperInitializer>()
+                .SingleInstance();
+
+            builder.RegisterType<PathService>()
+                .As<IPathService>()
+                .As<IPathServiceInitializer>()
                 .SingleInstance();
         }
     }
