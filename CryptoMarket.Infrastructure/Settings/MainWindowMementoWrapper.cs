@@ -15,12 +15,12 @@ internal class MainWindowMementoWrapper : IMainWindowMementoWrapper, IMainWindow
         _mainWindowMemento = new MainWindowMemento();
     }
 
-    public void Dispose()
+    public async void Dispose()
     {
         EnsureInitialized();
 
         var serializedMemento = JsonConvert.SerializeObject(_mainWindowMemento);
-        File.WriteAllText(_settingsFilePath, serializedMemento);
+        await File.WriteAllTextAsync(_settingsFilePath, serializedMemento);
     }
 
     public double Left
@@ -93,7 +93,7 @@ internal class MainWindowMementoWrapper : IMainWindowMementoWrapper, IMainWindow
         }
     }
 
-    public void Initialize()
+    public async Task InitializeAsync()
     {
         if (_initialized)
             throw new InvalidOperationException($"{nameof(IMainWindowMementoWrapper)} is already initialized");
@@ -113,9 +113,9 @@ internal class MainWindowMementoWrapper : IMainWindowMementoWrapper, IMainWindow
         if (!File.Exists(_settingsFilePath))
             return;
 
-        var serializedMemento = File.ReadAllText(_settingsFilePath);
+        var serializedMemento = await File.ReadAllTextAsync(_settingsFilePath);
 
-        _mainWindowMemento = JsonConvert.DeserializeObject<MainWindowMemento>(serializedMemento);
+        _mainWindowMemento =  JsonConvert.DeserializeObject<MainWindowMemento>(serializedMemento);
     }
 
     private void EnsureInitialized()

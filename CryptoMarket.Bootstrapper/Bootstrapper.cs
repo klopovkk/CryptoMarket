@@ -29,9 +29,9 @@ public class Bootstrapper : IDisposable
         _container.Dispose();
     }
 
-    public Window Run()
+    public async Task<Window> Run()
     {
-        InitializeDependencies();
+        await InitializeDependenciesAsync();
 
         var mainWindowViewModel = _container.Resolve<IMainWindowViewModel>();
         var windowManager = _container.Resolve<IWindowManager>();
@@ -44,8 +44,8 @@ public class Bootstrapper : IDisposable
         return window;
     }
 
-    private void InitializeDependencies()
+    private async Task InitializeDependenciesAsync()
     {
-        _container.Resolve<IMainWindowMementoWrapperInitializer>().Initialize();
+       await _container.Resolve<IMainWindowMementoWrapperInitializer>().InitializeAsync();
     }
 }

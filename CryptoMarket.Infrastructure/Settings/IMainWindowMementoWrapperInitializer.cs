@@ -8,6 +8,6 @@ namespace CryptoMarket.Infrastructure.Settings
 {
     public interface IMainWindowMementoWrapperInitializer
     {
-        void Initialize();
+        Task InitializeAsync();
     }
 }
