@@ -8,11 +8,16 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="8.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CryptoMarket.Domain\CryptoMarket.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Rest\" />
   </ItemGroup>
 
 </Project>

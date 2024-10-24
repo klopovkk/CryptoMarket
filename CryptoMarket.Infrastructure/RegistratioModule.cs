@@ -1,6 +1,8 @@
 ﻿using Autofac;
+using CryptoMarket.Domain.Rest;
 using CryptoMarket.Domain.Settings;
 using CryptoMarket.Infrastructure.Common;
+using CryptoMarket.Infrastructure.Rest;
 using CryptoMarket.Infrastructure.Settings;
 
 namespace CryptoMarket.Infrastructure
@@ -20,6 +22,8 @@ namespace CryptoMarket.Infrastructure
                 .As<IPathService>()
                 .As<IPathServiceInitializer>()
                 .SingleInstance();
+
+            builder.RegisterType<ApiRequestExecutor>().As<IApiRequestExecutor>().SingleInstance();
         }
     }
 }

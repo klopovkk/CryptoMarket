@@ -2,7 +2,7 @@
 
 namespace CryptoMarket.ViewModels.Windows;
 
-public abstract class WindowViewModel<TWindowMementoWrapper> 
+public abstract class WindowViewModel<TWindowMementoWrapper> : ViewModel , IWindowViewModel
 where TWindowMementoWrapper : class, IWindowMementoWrapper
 {
     private readonly IWindowMementoWrapper _windowMementoWrapper;
