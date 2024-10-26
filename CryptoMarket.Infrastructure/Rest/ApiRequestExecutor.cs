@@ -5,16 +5,18 @@ namespace CryptoMarket.Infrastructure.Rest;
 
 public class ApiRequestExecutor : IApiRequestExecutor
 {
-    private readonly IHttpClientFactory _httpClientFactory;
-    private readonly Uri _baseAdress = new("api.coincap.io/v2/assets");
+    private readonly IHttpClientFactory _httpClientFactory; 
+    string server = "https://api.coincap.io/v2/";
+    private readonly Uri _baseAddress;
     public ApiRequestExecutor(IHttpClientFactory httpClientFactory)
     {
         _httpClientFactory = httpClientFactory;
+        _baseAddress = new Uri(server);
     }
     public async Task<TResponse> GetAsync<TResponse>(string request)
     {
         using var httpClient = _httpClientFactory.CreateClient();
-        httpClient.BaseAddress = _baseAdress;
+        httpClient.BaseAddress = _baseAddress;
 
         var httpResponceMessage = await httpClient.GetAsync(request);
 
