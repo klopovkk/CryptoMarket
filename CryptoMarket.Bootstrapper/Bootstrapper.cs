@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using Autofac;
+using CryptoMarket.Domain.Factories;
 using CryptoMarket.Infrastructure.Common;
 using CryptoMarket.Infrastructure.Settings;
 using CryptoMarket.ViewModels.MainWindow;
@@ -10,6 +11,8 @@ namespace CryptoMarket.Bootstrapper;
 public class Bootstrapper : IDisposable
 {
     private readonly IContainer _container;
+
+    private IMainWindowViewModel _mainWindowViewModel;
 
     public Bootstrapper()
     {
@@ -28,10 +31,11 @@ public class Bootstrapper : IDisposable
     {
         await InitializeDependenciesAsync();
 
-        var mainWindowViewModel = _container.Resolve<IMainWindowViewModel>();
+        var mainWindowViewModelFactory = _container.Resolve<IFactory<IMainWindowViewModel>>();
+        _mainWindowViewModel = mainWindowViewModelFactory.Create();
         var windowManager = _container.Resolve<IWindowManager>();
 
-        var mainWindow = windowManager.Show(mainWindowViewModel);
+        var mainWindow = windowManager.Show(_mainWindowViewModel);
 
         if (mainWindow is not Window window)
             throw new NotImplementedException();

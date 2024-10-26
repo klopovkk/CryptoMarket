@@ -1,8 +1,7 @@
 ﻿using System.Net.Http;
 using Autofac;
-using Autofac.Core;
 using CryptoMarket.Bootstrapper.Factories;
-using CryptoMarket.ViewModels.Windows;
+using CryptoMarket.Domain.Factories;
 using CryptoMarket.Views.Factories;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -26,5 +25,6 @@ public class RegistrationModule : Module
                 return httpClientFactory;
             })
             .SingleInstance();
+        builder.RegisterGeneric(typeof(Factory<>)).As(typeof(IFactory<>)).SingleInstance();
     }
 }
